@@ -1,0 +1,28 @@
+{
+    "name": "alanly/traktor",
+    "description": "A Trakt.tv API client library in PHP, compatible with PSR-4 and Composer.",
+    "type": "library",
+    "homepage": "https://github.com/alanly/traktor",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alan Ly",
+            "email": "hello@alan.ly",
+            "homepage": "http://alan.ly",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "guzzle/guzzle": "3.9.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.1.*",
+        "mockery/mockery": "0.9.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Traktor\\": "src/Traktor/"
+        }
+    }
+}
