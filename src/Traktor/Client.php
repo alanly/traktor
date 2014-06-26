@@ -159,7 +159,7 @@ class Client
      */
     protected function checkResponseErrors($response)
     {
-        $responseStatusCode = $response->getStatusCode();
+        $responseStatusCode = intval($response->getStatusCode());
 
         if ($responseStatusCode === 200) return;
 
@@ -178,7 +178,8 @@ class Client
             case 503:
                 throw new AvailabilityException($decodedBody->error);
             default:
-                throw new RequestException('Unrecognized error response: '
+                throw new RequestException('Unrecognized status code ('
+                    . $responseStatusCode . '): '
                     . $response->getBody());
         }
     }
