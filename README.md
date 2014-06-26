@@ -3,7 +3,9 @@ Traktor
 
 [![Build Status - Master](https://api.travis-ci.org/alanly/traktor.svg?branch=master)](https://travis-ci.org/alanly/traktor)
 
-Traktor is a simple PHP client for the Trakt.tv API service, that allows you to cleanly integrate the data available on Trakt into your application. Currently, it supports only non-developer and GET-based methods.
+Traktor is a simple PHP client for the Trakt.tv API service, that allows you to cleanly integrate the data available on Trakt into your application.
+
+Currently, it supports only non-developer and GET-based API methods. It makes use of the GuzzleHttp library and requires the use of PHP 5.4 or above.
 
 It aims to be fairly basic and simple to use:
 
