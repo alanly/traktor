@@ -141,7 +141,7 @@ class Client
         $this->checkResponseErrors($response);
 
         try {
-            $decodedBody = $response->json();
+            $decodedBody = $response->json(['object' => true]);
         } catch (GuzzleHttp\Exception\ParseException $e) {
             throw new RequestException('Unable to parse response: '
                 . $response->getBody());
@@ -164,7 +164,7 @@ class Client
         if ($responseStatusCode === 200) return;
 
         try {
-            $decodedBody = $response->json();
+            $decodedBody = $response->json(['object' => true]);
         } catch (GuzzleHttp\Exception\ParseException $e) {
             throw new RequestException('Unable to parse response: '
                 . $response->getBody());
